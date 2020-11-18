@@ -1,0 +1,9 @@
+{
+  "name": "015-church-gifts",
+  "version": "0.1.0",
+  "main": "server.js",
+  "repository": "https://github.com/aazcast/donations.git",
+  "author": "aazcast",
+  "license": "MIT",
+  "private": false
+}
