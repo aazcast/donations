@@ -1,4 +1,3 @@
-
 exports.up = function(knex) {
   return Promise.all([
     knex.schema.createTable('people', table => {
@@ -33,5 +32,5 @@ exports.down = function(knex) {
     knex.schema.dropTable('users_gifts'),
     knex.schema.dropTable('users'),
     knex.schema.dropTable('people'),
- ])
+  ])
 };
