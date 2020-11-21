@@ -1,0 +1,8 @@
+extends ./layout
+
+block content
+  img(src="https://alltruck.s3.us-east-2.amazonaws.com/business/logo.png", alt="Logo", class="logo")
+  h1.title_mail CONFIRMAR CORREO ELECTRÓNICO
+  p  Hola. Gracias por registrarse a AllTruck, confirma tu correo electrónico en el siguiente enlace:
+  +button(url, 'Confirmar Correo →')
+  p Si no solicitó este correo electrónico, ignórelo.

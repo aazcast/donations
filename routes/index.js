@@ -8,6 +8,7 @@ const Person = require('../controllers/Person');
 //Import Person
 router.post('/import', Person.importPerson)
 //Person routes -
-router.post('/getperson', Person.getPerson);
+router.post('/getperson', Person.getRandomPerson);
+router.post('/assign', Person.assignPerson);
 
 module.exports = router;
