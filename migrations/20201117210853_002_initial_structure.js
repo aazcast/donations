@@ -22,7 +22,7 @@ exports.up = function(knex) {
     knex.schema.createTable('users_gifts', table => {
       table.increments('id').primary(),
       table.integer('user_id').notNullable().references('users.id'),
-      table.integer('person_id').notNullable().references('people.id')
+      table.integer('person_id').notNullable().references('people.id').unique()
     }),
   ])
 };
