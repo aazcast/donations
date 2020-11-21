@@ -94,7 +94,7 @@ exports.assignPerson = async (req, res, next) => {
         to: data.user.phone
       });
 
-    return true;
+    res.json({success: true}).status(201);
   } catch (err) {
     next(err);
   }
