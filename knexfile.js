@@ -17,7 +17,7 @@ if (process.env.NODE_ENV !== 'development') {
     host: process.env.DATABASEHOST,
     port: process.env.DATABASEPORT,
     ssl: true,
-    rejectUnauthorized: true
+    rejectUnauthorized: false
   }
 }
 

@@ -12,8 +12,8 @@ block content
    strong El regalo debes entregarlo en Oasis Moravia, con la asistente pastoral, puede comunicarse al 2507-9801, en horario de oficina. El mismo debe incluir el número de identificador.
   if isfemenino
     h2 Datos de la persona (Mujer)
-  if ismasculino
-    h2 Datos de la persona (Mujer)
+  else if ismasculino
+    h2 Datos de la persona (Hombre)
   p Identificador #: #{person.id}
   p Nombre #{person.name}
   p Edad: #{person.years}

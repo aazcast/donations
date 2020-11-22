@@ -12,6 +12,7 @@ const routes = require('./routes');
 //Databases
 const db = require('./db');
 
+
 //RealTime
 const pubnub = require('./handlers/pubnub');
 
@@ -39,7 +40,7 @@ app.use(express.static(path.join(__dirname, 'views')));
 
 //Ger Cookies
 app.use(cookieParser());
-
+require('./jobs/validate');
 
 //Start
 app.get('/', (req, res) => {
