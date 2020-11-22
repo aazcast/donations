@@ -1,5 +1,11 @@
 // Update with your config settings.
 require('dotenv').config({ path: './.env' });
+const pg = require('pg')
+if (process.env.NODE_ENV !== 'development') {
+  pg.defaults.ssl = {
+    rejectUnauthorized: false,
+  }
+}
 
 let connectionfile = {
   database: process.env.DATABASENAME,
@@ -15,9 +21,7 @@ if (process.env.NODE_ENV !== 'development') {
     user:     process.env.DATABASEUSER,
     password: process.env.DATABASEPASS,
     host: process.env.DATABASEHOST,
-    port: process.env.DATABASEPORT,
-    ssl: true,
-    rejectUnauthorized: false
+    port: process.env.DATABASEPORT
   }
 }
 
@@ -28,6 +32,9 @@ module.exports = {
     pool: {
       min: 2,
       max: 10
+    },
+    ssl: {
+      rejectUnauthorized: false
     },
     migrations: {
       tableName: 'pg_migrations'
