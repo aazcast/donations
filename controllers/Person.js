@@ -109,7 +109,7 @@ exports.assignPerson = async (req, res, next) => {
       .create({
         body: `Gracias ${data.user.name} por apoyar en esta Navidad! Lleva el regalo con el # identificador: ${data.person.id}, revisa tu email`,
         from: '+13614901812',
-        to: data.user.phone
+        to: user.phone
       });
     const percent = await _requestPercent();
     await Pubnub.publish('update_people', percent);
