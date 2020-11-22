@@ -25,6 +25,7 @@
     "graceful-fs": "^4.2.4",
     "juice": "^7.0.0",
     "knex": "^0.21.12",
+    "lodash": "^4.17.20",
     "morgan": "^1.10.0",
     "nodemailer": "^6.4.16",
     "nodemailer-sendgrid": "^1.0.3",

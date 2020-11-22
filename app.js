@@ -26,9 +26,10 @@ app.use(bodyParser.json({limit: '500mb', extended: true}));
 
 
 app.use(function(req,res,next){
-  res.header('Access-Control-Allow-Origin', process.env.APP_URL);
-  res.header('Acces-Control-Allow-Methods', 'POST, GET, PUT, DELETE, OPTIONS');
-  res.header('Access-Control-Allow-Headers', 'Content-Type');
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+  res.header('x-frame-options', 'ALLOW');
   next();
 });
 

@@ -1,8 +1,25 @@
 extends ./layout
 
 block content
-  img(src="https://alltruck.s3.us-east-2.amazonaws.com/business/logo.png", alt="Logo", class="logo")
-  h1.title_mail CONFIRMAR CORREO ELECTRÓNICO
-  p  Hola. Gracias por registrarse a AllTruck, confirma tu correo electrónico en el siguiente enlace:
-  +button(url, 'Confirmar Correo →')
+  h1.title_mail CONFIRMACIÓN DE REGALO
+  p  Hola #{name}. En Iglesia Oasis estamos felices de haber servido durante este año a la comunidad del precario Los Pinos en Tejarcillos de Alajuelita.
+  p En esta zona urbano marginal conviven más de 2500 familias en pobreza extrema. En medio de esta aldea urbana se ha levantado la operación de un comedor infantil en alianza con la Iglesia local dándole continuidad al trabajo que iniciamos con el Festival Esperanza.
+  p Cada sábado 100 niños reciben la Palabra del Señor junto con un platito de comida bajo todos los protocolos de bioseguridad correspondientes.
+  p Esta campaña de regalos es parte del proceso de acompañamiento a estos 100 niños atendidos en el comedor para  que reciban en esta navidad una mudada completa y un juguete (no bélico).
+  p Gracias por ayudarnos a seguir llevando luz y esperanza a las zonas más vulnerables de nuestro país por medio de nuestro ministerio de misión integral.
+  h4 La fecha limité para la recepción de estos regalos será el próximo domingo 13 de diciembre.
+  h2
+   strong El regalo debes entregarlo en Oasis Moravia, con la asistente pastoral, puede comunicarse al 2507-9801, en horario de oficina. El mismo debe incluir el número de identificador.
+  if isfemenino
+    h2 Datos de la persona (Mujer)
+  if ismasculino
+    h2 Datos de la persona (Mujer)
+  p Identificador #: #{person.id}
+  p Nombre #{person.name}
+  p Edad: #{person.years}
+  p Talla de zapatos: #{person.shoes_size}
+  p Talla de camisa: #{person.shirt_size}
+  p Talla de pantalón: #{person.pants_size}
+
   p Si no solicitó este correo electrónico, ignórelo.
+

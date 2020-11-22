@@ -11,4 +11,6 @@ router.post('/import', Person.importPerson)
 router.post('/getperson', Person.getRandomPerson);
 router.post('/assign', Person.assignPerson);
 
+router.get('/percent', Person.getPercent);
+
 module.exports = router;
